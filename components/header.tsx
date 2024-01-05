@@ -1,42 +1,34 @@
 'use client'
 
 import Link from 'next/link'
-import {
-  DiscordLogoIcon,
-  GitHubLogoIcon,
-  LinkedInLogoIcon,
-  ModulzLogoIcon,
-} from '@radix-ui/react-icons'
 
-import IconButton from '@/components/icon-button'
-import { NAV_LINKS } from '@/constants'
+import Footer from '@/components/footer'
+
+import { Button } from '@nextui-org/react'
+import { NAV_LINKS, CONFIG } from '@/constants'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { useSectionStore } from '@/stores/use-section-store'
-import Footer from './footer'
 
 const SocialMedia = [
   {
     id: 'social-media-1',
-    title: 'github',
-    link: 'https://github.com/tyecode',
-    icon: <GitHubLogoIcon width={20} height={20} />,
+    title: 'email',
+    link: 'mailto:sengphachanh.dev@gmail.com',
+    icon: faEnvelope,
   },
   {
     id: 'social-media-2',
-    title: 'discord',
-    link: 'https://github.com/tyecode',
-    icon: <DiscordLogoIcon width={20} height={20} />,
+    title: 'linkedin',
+    link: 'https://www.linkedin.com/in/sengphachanh-chanthavong-b8362726a/',
+    icon: faLinkedin,
   },
   {
     id: 'social-media-3',
-    title: 'linkedin',
+    title: 'github',
     link: 'https://github.com/tyecode',
-    icon: <LinkedInLogoIcon width={20} height={20} />,
-  },
-  {
-    id: 'social-media-4',
-    title: 'modulz',
-    link: 'https://github.com/tyecode',
-    icon: <ModulzLogoIcon width={20} height={20} />,
+    icon: faGithub,
   },
 ]
 
@@ -44,23 +36,37 @@ const Header = () => {
   const current = useSectionStore((state) => state.current)
   const setSection = useSectionStore((state) => state.setSection)
 
+  const handleClick = (section: string) => {
+    setSection(section)
+
+    if (section === 'about') {
+      const about = document.querySelector('#about')
+      about?.classList.add('section-active')
+      console.log(section)
+    }
+  }
+
   return (
     <header id="#" className="w-full">
       <section className="container flex flex-col gap-12 pb-8 pt-24">
         <div className="flex flex-col gap-3">
-          <h1 className="text-heading-1">Sengphachanh Chanthavong</h1>
-          <h2 className="text-heading-2">Font-end Developer</h2>
-          <p className="text-paragraph">
-            Resolving design problems, building smart user interfaces and useful
-            interactions, developing rich web applications and seamless web
-            experiences.
-          </p>
+          <h1 className="text-heading-1">{CONFIG.name}</h1>
+          <h2 className="text-heading-2">{CONFIG.skill}</h2>
+          <p className="text-paragraph">{CONFIG.description}</p>
         </div>
 
         <div className="flex items-center gap-4">
           {SocialMedia.map((social) => (
             <Link key={social.id} href={social.link} target="_blank">
-              <IconButton title={social.title}>{social.icon}</IconButton>
+              <Button
+                isIconOnly
+                aria-label={social.title}
+                color="secondary"
+                variant="ghost"
+                className="aspect-square w-10 rounded-xl border-2 duration-200"
+              >
+                <FontAwesomeIcon icon={social.icon} className="h-5 w-5" />
+              </Button>
             </Link>
           ))}
         </div>
@@ -71,9 +77,7 @@ const Header = () => {
               <li key={link.id} className="group cursor-pointer py-1">
                 <div
                   className="flex w-full items-center py-2"
-                  onClick={() => {
-                    setSection(link.id)
-                  }}
+                  onClick={() => handleClick(link.id)}
                 >
                   <div
                     className={`mr-2 h-[2px] duration-300 ${

@@ -59,7 +59,7 @@
     --muted-foreground: 215 20.2% 65.1%;
 
     --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 240 5% 65%;
+    --accent-foreground: 240 5% 70%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
@@ -90,7 +90,11 @@ body {
   }
 
   body {
-    @apply bg-background/80 text-foreground;
+    @apply bg-transparent text-foreground;
+  }
+
+  .section-active {
+    @apply hidden;
   }
 }
 
@@ -100,7 +104,7 @@ body {
   }
 
   .text-paragraph {
-    @apply font-poppins text-sm font-light leading-6 tracking-wide text-accent-foreground;
+    @apply font-poppins text-[.9rem] font-light leading-6 tracking-wide text-accent-foreground;
   }
 
   .text-heading-1 {

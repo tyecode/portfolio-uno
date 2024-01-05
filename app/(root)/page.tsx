@@ -1,11 +1,13 @@
 'use client'
 
-import Footer from '@/components/footer'
+import { useEffect, useState } from 'react'
+
 import AboutSection from '@/components/sections/about-section'
 import ExperienceSection from '@/components/sections/experience-section'
 import ProjectsSection from '@/components/sections/projects-section'
+import Footer from '@/components/footer'
+
 import { useSectionStore } from '@/stores/use-section-store'
-import { useEffect, useState } from 'react'
 
 export default function Home() {
   const [section, setSection] = useState('about')

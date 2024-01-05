@@ -1,6 +1,10 @@
+'use client'
+
+import { Link } from '@nextui-org/react'
 import { Card, CardBody } from '@nextui-org/react'
 import { DividerHorizontalIcon } from '@radix-ui/react-icons'
-import { Link } from '@nextui-org/react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCaretRight } from '@fortawesome/free-solid-svg-icons'
 
 const ExperienceCard = ({ data }: any) => {
   return (
@@ -8,7 +12,7 @@ const ExperienceCard = ({ data }: any) => {
       isBlurred
       className="border-2 border-secondary-200 bg-transparent text-foreground"
     >
-      <CardBody className="flex flex-col items-start justify-start gap-0 md:flex-row md:gap-12 lg:flex-col lg:gap-0">
+      <CardBody className="flex flex-col items-start justify-start gap-0 p-6 md:flex-row md:gap-12 lg:flex-col lg:gap-0">
         <p className="font-poppins text-sm font-normal uppercase text-accent-foreground md:w-[48rem] lg:w-fit">
           {data.period}
         </p>
@@ -18,13 +22,29 @@ const ExperienceCard = ({ data }: any) => {
               <span className="text-heading-4">{data.position}</span>
               <span className="flex gap-1 font-fira text-secondary">
                 <DividerHorizontalIcon width={24} height={24} />
-                <Link href="#" underline="hover" size="md" color="secondary">
+                <Link
+                  href={data.link}
+                  underline="hover"
+                  size="md"
+                  color="secondary"
+                  target="_blank"
+                >
                   {data.title}
                 </Link>
               </span>
             </div>
           </h4>
-          <p className="text-paragraph">{data.description}</p>
+          <div className="flex flex-col gap-2">
+            {data.description.map((list: string, index: number) => (
+              <span key={`experience-list-${index}`} className="flex gap-5">
+                <FontAwesomeIcon
+                  icon={faCaretRight}
+                  className="mt-1 h-4 w-4 text-secondary"
+                />
+                <p className="text-paragraph">{list}</p>
+              </span>
+            ))}
+          </div>
         </div>
       </CardBody>
     </Card>

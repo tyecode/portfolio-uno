@@ -1,5 +1,11 @@
+'use client'
+
 import Header from '@/components/header'
 import NavigationBar from '@/components/navigation-bar'
+
+import { config } from '@fortawesome/fontawesome-svg-core'
+
+config.autoAddCss = false
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (

@@ -61,7 +61,7 @@ const MatrixBackground: React.FC = () => {
   }, [canvas, timeout])
 
   return (
-    <div className="fixed left-0 top-0 z-[-1] h-full w-full overflow-hidden bg-transparent duration-200">
+    <div className="fixed left-0 top-0 -z-50 h-full w-full overflow-hidden bg-transparent duration-200">
       <canvas ref={canvas} />
     </div>
   )
