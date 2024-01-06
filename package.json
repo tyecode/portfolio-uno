@@ -1,7 +1,12 @@
 {
-  "name": "portfolio-next-app",
+  "name": "portfolio-uno",
   "version": "1.0.1",
-  "private": true,
+  "private": false,
+  "author": "tyecode"
+  "repository": {
+		"type": "git",
+		"url": "https://github.com/tyecode/portfolio-uno.git"
+	}
   "scripts": {
     "dev": "next dev",
     "build": "next build",
