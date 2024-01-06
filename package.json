@@ -1,12 +1,13 @@
 {
   "name": "portfolio-uno",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "private": false,
-  "author": "tyecode"
+  "author": "Sengphachanh Chanthavong",
+  "license": "MIT",
   "repository": {
-		"type": "git",
-		"url": "https://github.com/tyecode/portfolio-uno.git"
-	}
+    "type": "git",
+    "url": "https://github.com/tyecode/portfolio-uno.git"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
