@@ -31,4 +31,4 @@ npm run dev
 
 ## License
 
-Licensed under the [MIT License](https://choosealicense.com/licenses/mit/)
+Licensed under the [MIT License](https://github.com/tyecode/portfolio-uno/blob/main/LICENSE)
