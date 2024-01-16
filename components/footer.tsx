@@ -8,7 +8,7 @@ const Footer = () => {
       <span className="flex flex-row gap-1">
         <span className="text-paragraph flex-center mb-6 flex-wrap gap-1 text-center text-xs tracking-wide md:text-start">
           <span>
-            ©2023{' '}
+            &copy; {new Date().getFullYear()}{' '}
             <Link
               href={'https://github.com/tyecode'}
               className="tracking-wide duration-300 hover:text-secondary"
@@ -16,7 +16,7 @@ const Footer = () => {
             >
               tyecode
             </Link>
-            , All rights reserved.
+            . All rights reserved.
           </span>
         </span>
       </span>

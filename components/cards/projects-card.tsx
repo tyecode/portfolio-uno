@@ -51,15 +51,12 @@ const ProjectsCard = ({ data }: any) => {
                     <Button variant="flat" color="secondary" size="sm">
                       {link.id === 1 && (
                         <FontAwesomeIcon
-                          className="text-[.8rem]"
+                          className="h-[.84rem] w-[.84rem]"
                           icon={faExternalLink}
                         />
                       )}
                       {link.id === 2 && (
-                        <FontAwesomeIcon
-                          className="text-[1rem]"
-                          icon={faGithub}
-                        />
+                        <FontAwesomeIcon className="h-4 w-4" icon={faGithub} />
                       )}
                       {link.title}
                     </Button>

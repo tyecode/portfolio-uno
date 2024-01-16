@@ -7,7 +7,11 @@ import Footer from '@/components/footer'
 import { Button } from '@nextui-org/react'
 import { NAV_LINKS, CONFIG } from '@/constants'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import {
+  faGithub,
+  faLinkedin,
+  faFacebookF,
+} from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { useSectionStore } from '@/stores/use-section-store'
 
@@ -20,12 +24,18 @@ const SocialMedia = [
   },
   {
     id: 'social-media-2',
-    title: 'linkedin',
-    link: 'https://www.linkedin.com/in/sengphachanh-chanthavong-b8362726a/',
-    icon: faLinkedin,
+    title: 'facebook',
+    link: 'https://www.facebook.com/profile.php?id=100018649715222',
+    icon: faFacebookF,
   },
   {
     id: 'social-media-3',
+    title: 'linkedin',
+    link: 'https://www.linkedin.com/in/sengphachanh-chanthavong-b8362726a',
+    icon: faLinkedin,
+  },
+  {
+    id: 'social-media-4',
     title: 'github',
     link: 'https://github.com/tyecode',
     icon: faGithub,
