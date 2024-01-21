@@ -3,14 +3,14 @@
 import { useState } from 'react'
 
 import {
+  Button,
+  Link,
   Navbar,
   NavbarBrand,
   NavbarContent,
-  Link,
-  Button,
-  NavbarMenuToggle,
   NavbarMenu,
   NavbarMenuItem,
+  NavbarMenuToggle,
 } from '@nextui-org/react'
 
 import { NAV_LINKS } from '@/constants'
@@ -24,9 +24,7 @@ const NavigationBar = () => {
         <NavbarBrand>
           <Link href="#">
             <Button
-              onClick={() => {
-                setIsMenuOpen(false)
-              }}
+              onClick={() => setIsMenuOpen(false)}
               aria-label="Logo"
               color="secondary"
               variant="flat"
@@ -45,23 +43,24 @@ const NavigationBar = () => {
       </NavbarContent>
 
       <NavbarMenu className="py-8">
-        {NAV_LINKS.map((link, index) => (
-          <NavbarMenuItem key={link.id}>
-            <Link
-              color={'foreground'}
-              className={`w-full py-2 font-inter text-xs font-medium uppercase tracking-wider ${
-                index !== 0 ? 'border-t-2' : ''
-              }`}
-              href={'#' + link.id}
-              size="md"
-              onClick={() => {
-                setIsMenuOpen(!isMenuOpen)
-              }}
-            >
-              {link.title}
-            </Link>
-          </NavbarMenuItem>
-        ))}
+        {NAV_LINKS.map((link, index) => {
+          const { id, title } = link
+          return (
+            <NavbarMenuItem key={id}>
+              <Link
+                color={'foreground'}
+                className={`w-full py-2 font-inter text-xs font-medium uppercase tracking-wider ${
+                  index !== 0 ? 'border-t-2' : ''
+                }`}
+                href={'#' + id}
+                size="md"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {title}
+              </Link>
+            </NavbarMenuItem>
+          )
+        })}
       </NavbarMenu>
     </Navbar>
   )

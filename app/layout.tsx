@@ -1,7 +1,6 @@
-import MatrixBackground from '@/components/matrix-background'
-
-import { Providers } from '@/app/providers'
 import { CONFIG } from '@/constants'
+import MatrixBackground from '@/components/matrix-background'
+import { Providers } from '@/app/providers'
 
 import './globals.css'
 

@@ -1,7 +1,7 @@
 'uee client'
 
-import ExperienceCard from '@/components/cards/experience-card'
 import { EXPERIENCE } from '@/constants'
+import ExperienceCard from '@/components/cards/experience-card'
 
 const ExperienceSection = () => {
   const reversed = [...EXPERIENCE].reverse()

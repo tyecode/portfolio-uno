@@ -1,7 +1,7 @@
 'use client'
 
-import ProjectsCard from '@/components/cards/projects-card'
 import { PROJECTS } from '@/constants'
+import ProjectsCard from '@/components/cards/projects-card'
 
 const ProjectsSection = () => {
   const reversed = [...PROJECTS].reverse()

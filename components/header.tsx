@@ -1,18 +1,17 @@
 'use client'
 
 import Link from 'next/link'
-
-import Footer from '@/components/footer'
-
-import { Button } from '@nextui-org/react'
-import { NAV_LINKS, CONFIG } from '@/constants'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import {
   faGithub,
   faLinkedin,
   faFacebookF,
 } from '@fortawesome/free-brands-svg-icons'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { Button } from '@nextui-org/react'
+
+import { NAV_LINKS, CONFIG } from '@/constants'
+import Footer from '@/components/footer'
 import { useSectionStore } from '@/stores/use-section-store'
 
 const SocialMedia = [
