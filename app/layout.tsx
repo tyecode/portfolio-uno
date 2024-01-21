@@ -6,14 +6,7 @@ import './globals.css'
 
 export const metadata = {
   title: CONFIG.name + ' - Personal Website',
-  keywords: [
-    'Front-End',
-    'Developer',
-    'Sengphachanh Chanthavong',
-    'Tyecode',
-    'Portfolio',
-    'Personal Website',
-  ],
+  keywords: ['personal', 'website', 'tyecode', 'sengphachanh', 'chanthavong'],
   description:
     'Sengphachanh Chanthavong or Tyecode - A Front-end Developer passionate about Web development. Explore my personal website and contact me today.',
 }
