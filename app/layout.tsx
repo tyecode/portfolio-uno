@@ -5,8 +5,17 @@ import { Providers } from '@/app/providers'
 import './globals.css'
 
 export const metadata = {
-  title: CONFIG.name,
-  description: 'Personal website',
+  title: CONFIG.name + ' - Personal Website',
+  keywords: [
+    'Front-End',
+    'Developer',
+    'Sengphachanh Chanthavong',
+    'Tyecode',
+    'Portfolio',
+    'Personal Website',
+  ],
+  description:
+    'Sengphachanh Chanthavong or Tyecode - A Front-end Developer passionate about Web development. Explore my personal website and contact me today.',
 }
 
 export default function RootLayout({
