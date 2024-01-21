@@ -30,7 +30,7 @@ const SocialMedia = [
   {
     id: 'social-media-3',
     title: 'linkedin',
-    link: 'https://www.linkedin.com/in/sengphachanh-chanthavong-b8362726a',
+    link: 'https://www.linkedin.com/in/tyecode',
     icon: faLinkedin,
   },
   {
