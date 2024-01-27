@@ -36,13 +36,15 @@ const ExperienceCard = ({ data }: any) => {
           </h4>
           <div className="flex flex-col gap-2">
             {data.description.map((list: string, index: number) => (
-              <span key={`experience-list-${index}`} className="flex gap-5">
-                <FontAwesomeIcon
-                  icon={faCaretRight}
-                  className="mt-1 h-4 w-4 text-secondary"
-                />
+              <div key={`experience-list-${index}`} className="flex gap-5">
+                <div>
+                  <FontAwesomeIcon
+                    icon={faCaretRight}
+                    className="mt-1 h-4 w-4 text-secondary"
+                  />
+                </div>
                 <p className="text-paragraph">{list}</p>
-              </span>
+              </div>
             ))}
           </div>
         </div>
