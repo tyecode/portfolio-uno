@@ -15,7 +15,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false)
-    }, 3000)
+    }, 2000)
   }, [])
 
   return (
