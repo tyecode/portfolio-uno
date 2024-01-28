@@ -7,22 +7,11 @@ import { Providers } from '@/app/providers'
 import './globals.css'
 
 export const metadata: Metadata = {
-  metadataBase: new URL(CONFIG.url),
   title: 'Sengphachanh Chanthavong | Front-end Developer',
   description:
     'Explore the personal website of Sengphachanh Chanthavong, a passionate Front-end Developer. Discover my projects, skills, and get in touch today.',
-  keywords: [
-    'Sengphachanh Chanthavong',
-    'Tyecode',
-    'Front-end Developer',
-    'Web Development',
-    'Personal Website',
-  ],
+  metadataBase: new URL(CONFIG.url),
   authors: [
-    {
-      name: 'Sengphachanh Chanthavong',
-      url: CONFIG.url,
-    },
     {
       name: 'tyecode',
       url: 'https://github.com/tyecode',
@@ -43,13 +32,20 @@ export const metadata: Metadata = {
     canonical: CONFIG.url,
   },
   openGraph: {
-    type: 'website',
     title: 'Sengphachanh Chanthavong | Front-end Developer',
     description:
       'Explore the personal website of Sengphachanh Chanthavong, a passionate Front-end Developer. Discover my projects, skills, and get in touch today.',
     url: CONFIG.url,
     siteName: 'Sengphachanh Chanthavong',
-    images: '/images/cover.png',
+    images: [
+      {
+        url: '/images/cover.png',
+        width: 800,
+        height: 600,
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
   },
 }
 
