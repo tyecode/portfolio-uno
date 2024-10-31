@@ -1,5 +1,5 @@
 export const CONFIG = {
-  url: 'https://tyecode.space/',
+  url: 'https://tyecode.dev/',
   name: 'Sengphachanh Chanthavong',
   skill: 'Front-End Developer',
   description:
